@@ -7,7 +7,10 @@ module.exports = {
     author: 'Andrej Novikov', // this one is take, choose another name
     twitter: false, // replace it, or set to 'false' to disable "Tweet this" button
     social: [ // again, replace thse with your own value, or set to empty array to disable them
+      // { name: 'twitter', url: 'https://twitter.com/xiaoxinghu' },
+      { name: 'website', url: 'https://shroomist.github.io/centauri-stake-pool/' },
       { name: 'github', url: 'https://github.com/shroomist' },
+      { name: 'email', url: 'mailto:jazzaiman@gmail.com' },
     ]
   },
   plugins: [

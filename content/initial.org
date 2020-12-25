@@ -1,6 +1,15 @@
 #+TITLE: Initial
 #+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
-* Starting Updates :init:
-DATE:[2020-12-25 Fri 19:20]
+* DONE Starting Updates :init:
+CLOSED: [2020-12-25 Fri 19:20]
 
 launching this page.
+[[id:58bd0aae-fbc3-419e-b188-d16e5627a61c][other update]]
+
+* DONE other update
+CLOSED: [2020-12-25 Fri 20:20]
+:PROPERTIES:
+:ID:       58bd0aae-fbc3-419e-b188-d16e5627a61c
+:END:
+
+some details here
