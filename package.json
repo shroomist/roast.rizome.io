@@ -1,28 +1,7 @@
 {
-  "name": "gatsby-starter-blorg",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby and org-mode",
+  "name": "shroom-centauri-stake-pool",
+  "description": "Shroom Centauri Stake Pool",
   "version": "1.0.0",
-  "author": "Xiaoxing Hu <xiaoxing@huxx.org>",
-  "dependencies": {
-    "gatsby": "^2.27.2",
-    "gatsby-theme-blorg": "^2.3.13",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "prettier": "^2.2.0"
-  },
-  "keywords": [
-    "gatsby",
-    "blog",
-    "org-mode",
-    "orga"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "predevelop": "rm -rf .cache",
@@ -32,11 +11,21 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/orgapp/gatsby-starter-blorg"
+  "dependencies": {
+    "gatsby": "^2.27.2",
+    "gatsby-theme-blorg": "^2.3.13",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   },
-  "bugs": {
-    "url": "https://github.com/orgapp/gatsby-starter-blorg/issues"
-  }
+  "devDependencies": {
+    "prettier": "^2.2.0"
+  },
+  "keywords": [
+    "cardano",
+    "stake-pool",
+    "blockchain"
+  ],
+  "author": "Andrej Novikov <jazzaiman@gmail.com>"
 }

@@ -1,15 +1,13 @@
 module.exports = {
   pathPrefix: `/centauri-stake-pool`,
   siteMetadata: {
-    siteURL: 'https://orga.js.org', // replace this with your own domain
-    title: `Gatsby With Orga`, // replace it with your own title
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: 'Xiaoxing Hu', // this one is take, choose another name
-    twitter: 'xiaoxinghu', // replace it, or set to 'false' to disable "Tweet this" button
+    siteURL: 'https://shroomist.github.io/centauri-stake-pool/', // replace this with your own domain
+    title: 'Shroomist Centauri Stake Pool', // replace it with your own title
+    description: 'Staking Divination',
+    author: 'Andrej Novikov', // this one is take, choose another name
+    twitter: false, // replace it, or set to 'false' to disable "Tweet this" button
     social: [ // again, replace thse with your own value, or set to empty array to disable them
-      { name: 'twitter', url: 'https://twitter.com/xiaoxinghu' },
-      { name: 'website', url: 'https://www.huxiaoxing.com' },
-      { name: 'github', url: 'https://github.com/xiaoxinghu' },
+      { name: 'github', url: 'https://github.com/shroomist' },
     ]
   },
   plugins: [

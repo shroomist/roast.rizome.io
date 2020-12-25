@@ -3,7 +3,7 @@
 #+TODO: DRAFT | PUBLISHED
 #+TODO: TODO | DONE
 
-* PUBLISHED First Thing First :tutorial:
+* First Thing First :tutorial:
 CLOSED: [2020-11-10 Tue 16:00]
 :PROPERTIES:
 :SUMMARY: when you are reading this from =localhost=, you can skip this part now.
@@ -31,7 +31,7 @@ yarn run develop
 
 Now you have your site at http://localhost:8000.
 
-* PUBLISHED Config and Options :tutorial:
+* Config and Options :tutorial:
 CLOSED: [2020-11-10 Tue 15:55]
 :PROPERTIES:
 :SUMMARY:  Options for the plugin, explained
@@ -134,7 +134,7 @@ Generate slug for posts, with post metadata as input.
 *** =preset=
 [[https://theme-ui.com][theme-ui]] preset.
 
-* DONE About Your Org Files
+* About Your Org Files
 CLOSED: [2020-11-10 Tue 15:50]
 :PROPERTIES:
 :ID:       3c77e9cf-c23f-4a22-886c-c3b345d0b7d5

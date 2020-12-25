@@ -1,0 +1,6 @@
+#+TITLE: Initial
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
+* Starting Updates :init:
+DATE:[2020-12-25 Fri 19:20]
+
+launching this page.
