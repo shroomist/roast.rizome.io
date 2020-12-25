@@ -17,6 +17,7 @@ jobs:
       run: |
         yarn
         yarn run build -- --prefix-paths
+        $(npm bin)/gh-pages -d public -b master
       env:
         CI: true
     - name: Deploy to GitHub Pages
