@@ -49,7 +49,7 @@ theme-ui is so powerful that itself is worth a lengthy article to talk about, if
 ** Change the Avatar
 Prepare a photo of yourself, use it to replace file =src/gatsby-theme-blorg/avatar.png=. The new file could be any of the following format: =jpeg=, =jpg=, =gif=, =png=. What it actually does is shadowing a file from the theme, which is the core technique for [[Advanced Customization][Advanced Customization]].
 
-* PUBLISHED Advanced Customization :tutorial:
+* Advanced Customization :tutorial:
 CLOSED: [2020-11-10 Tue 15:40]
 :PROPERTIES:
 :SUMMARY:  How to change every details you can think of.
@@ -93,7 +93,7 @@ In the about example, you created your own =Layout= component, but you kept the 
 
 If you find yourself tweaking these components more than you would like to, or you have a problem with the design of the overall layout, or maybe the design philosophy is not matching what's in your mind, it's time for you to [[Create Your Website from Scratch][create your website from scratch]].
 
-* PUBLISHED Create Your Website from Scratch :tutorial:
+* Create Your Website from Scratch :tutorial:
 CLOSED: [2020-11-10 Tue 14:59]
 :PROPERTIES:
 :SUMMARY:  Laverage gatsby-theme-orga to create your perfect website from scratch.

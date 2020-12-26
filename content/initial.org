@@ -1,9 +1,9 @@
 #+TITLE: Initial
 #+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
 * DONE Starting Updates :init:
-CLOSED: [2020-12-25 Fri 19:20]
+CLOSED: [2020-12-26 Sat 12:20]
 
-launching this page.
+initial launch on testnet
 [[id:58bd0aae-fbc3-419e-b188-d16e5627a61c][other update]]
 
 * DONE other update

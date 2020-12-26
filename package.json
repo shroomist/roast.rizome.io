@@ -1,6 +1,6 @@
 {
-  "name": "shroom-centauri-stake-pool",
-  "description": "Shroom Centauri Stake Pool",
+  "name": "candy-pool",
+  "description": "CANDY Stake Pool",
   "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",
