@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { Grid, jsx, useColorMode } from 'theme-ui'
 import React from 'react'
-import { Box, Card, Container, Divider, Flex, Heading, Link } from 'theme-ui'
+import { Grid, jsx, useColorMode, Box, Card, Container, Divider, Flex, Heading, Link } from 'theme-ui'
 import HTML from 'gatsby-theme-blorg/src/components/html'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
