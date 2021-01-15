@@ -43,14 +43,13 @@ const BackgroundSection = ({ className }) => {
               <Flex>
                 <Card sx={{my: ['1em','2em']}}>
                   - Ticker: ROAST <br/>
-                  - Fee: 1 - 4.5% <br/>
+                  - Fee: 4% <br/>
                   - Fixed: 340 Ada <br/>
-                  - Pledge: 25k <br/>
+                  - Pledge: 1k <br/>
                   {/* - PoolId: <Link href="google.com">adapools</Link> */}
 
                 </Card>
               </Flex>
-                <Card><Heading as="h4">soon to be launched!</Heading></Card>
             </section>
           </section>
         </Flex>
@@ -88,7 +87,7 @@ export default ({data}) => {
           </Card>
           <Card>
             <Heading as='h3'>
-              air-gapped key management
+              secure
             </Heading>
             <div>
               security is the cornerstone for our service and we follow the best practices to excel
