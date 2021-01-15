@@ -6,9 +6,6 @@ import HTML from 'gatsby-theme-blorg/src/components/html'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
-/* export default () => <div>My Site!!!!!</div> */
-
-
 
 const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
@@ -61,11 +58,6 @@ const BackgroundSection = ({ className }) => {
     </BackgroundImage>
   )
 }
-
-/* const sectionStyles = {
- *   width: '100%',
- * } */
-
 export default ({data}) => {
   const [,setColorMode] = useColorMode()
   setColorMode('dark')
@@ -109,17 +101,3 @@ export default ({data}) => {
 }
 
 
-
-/* export const query = graphql`
- *   query {
- *     file(relativePath: { eq: "img/roast_1.png" }) {
- *       childImageSharp {
- *         # Specify the image processing specifications right in the query.
- *         # Makes it trivial to update as your page's design changes.
- *         fluid(quality:100) {
- *           ...GatsbyImageSharpFluid
- *         }
- *       }
- *     }
- *   }
- * ` */
