@@ -14,6 +14,14 @@ module.exports = {
     ]
   },
   plugins: [
+          {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `sources`,
+          path: `src`,
+          ignore: [`**/\.*`], // ignore files starting with a dot
+        },
+      },
     {
       resolve: `gatsby-theme-blorg`,
       options: {
@@ -21,7 +29,7 @@ module.exports = {
         // filter: () => true,
         // pagination: 5,
         // columns: 2,
-        // indexPath: '/',
+        indexPath: '/blog',
         // imageMaxWidth: 1380,
         // categoryIndexPath: category => `/${category}`,
         // tagIndexPath: tag => `/:${tag}:`,
