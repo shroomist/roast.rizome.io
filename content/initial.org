@@ -6,10 +6,22 @@ CLOSED: [2020-12-26 Sat 12:20]
 initial launch on testnet
 [[id:58bd0aae-fbc3-419e-b188-d16e5627a61c][other update]]
 
-* DONE other update
+* DONE Info
 CLOSED: [2020-12-25 Fri 20:20]
 :PROPERTIES:
+:IMAGE: ./img/1.png
 :ID:       58bd0aae-fbc3-419e-b188-d16e5627a61c
 :END:
-
-some details here
+** hero
+cardano roast pool
+Stakes are better when roasted in the wild.
+** detail
+- Ticker: ROAST
+- Fee: 1 - 4.5%
+- Fixed: 340 Ada
+- Pledge: 25k
+- PoolId: [[https://https://adapools.org/pool/<id>][adapools]]
+** feat
+- independent operation
+- cloud provisioned
+- secure cold storage
