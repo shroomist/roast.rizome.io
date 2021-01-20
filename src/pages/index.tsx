@@ -1,10 +1,13 @@
 /** @jsx jsx */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grid, jsx, useColorMode, Box, Card, Container, Divider, Flex, Heading, Link } from 'theme-ui'
 import HTML from 'gatsby-theme-blorg/src/components/html'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
+import { getPoolData, PoolSummary } from '../services/adapool'
+
+const poolId = '0d7af673b35b05c292168bab17b1069493d2d10fe095071f355fd724'
 
 const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
@@ -20,7 +23,6 @@ const BackgroundSection = ({ className }) => {
       }
     `
   )
-
   // Set ImageData.
   const imageData = data.desktop.childImageSharp.fluid
 
@@ -41,14 +43,7 @@ const BackgroundSection = ({ className }) => {
               <Heading as='h2'>stakes are better <br/> when roasted wild</Heading>
 
               <Flex>
-                <Card sx={{my: ['1em','2em']}}>
-                  - Ticker: ROAST <br/>
-                  - Fee: 4% <br/>
-                  - Fixed: 340 Ada <br/>
-                  - Pledge: 1k <br/>
-                  {/* - PoolId: <Link href="google.com">adapools</Link> */}
-
-                </Card>
+                <PoolData />
               </Flex>
             </section>
           </section>
@@ -56,9 +51,33 @@ const BackgroundSection = ({ className }) => {
     </BackgroundImage>
   )
 }
+
+const PoolData = () => {
+  const [info, setInfo] = useState<PoolSummary>(null)
+  useEffect(() => {
+    getPoolData(poolId).then(setInfo)
+  },[poolId])
+
+  if (!info) return null
+
+  return (
+    <Card sx={{my: ['1em','2em']}}>
+      - Ticker: {info.ticker} 🍖<br/>
+      - Fee: {info.fee * 100}% <br/>
+      - Fixed: {info.fixed / 1000000} Ada <br/>
+      - Pledge: {info.pledge / 1000000000}k <br/>
+      see on
+      <Link href={`http://adapools.org/pool/${poolId}`}> adapools</Link>
+      {/* - Rank: {info.rank} */}
+      {/* - PoolId: <Link href="google.com">adapools</Link> */}
+
+    </Card>
+  )
+}
 export default ({data}) => {
   const [,setColorMode] = useColorMode()
-  setColorMode('dark')
+  useEffect(() => setColorMode('dark'), [])
+
 
   return (
     <main sx={{ pb: 4, mx: 'auto' }}>
@@ -97,5 +116,4 @@ export default ({data}) => {
     </main>
   )
 }
-
 
