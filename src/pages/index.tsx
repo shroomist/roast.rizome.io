@@ -52,6 +52,8 @@ const BackgroundSection = ({ className }) => {
   )
 }
 
+const cardsx = { p: ['1em', '2em'] }
+
 const PoolData = () => {
   const [info, setInfo] = useState<PoolSummary>(null)
   useEffect(() => {
@@ -61,7 +63,7 @@ const PoolData = () => {
   if (!info) return null
 
   return (
-    <Card sx={{my: ['1em','2em']}}>
+    <Card sx={{ ...cardsx, my: ['1em','2em']}}>
       - Ticker: {info.ticker} 🍖<br/>
       - Fee: {info.fee * 100}% <br/>
       - Fixed: {info.fixed / 1000000} Ada <br/>
@@ -85,34 +87,38 @@ export default ({data}) => {
         {/* <Card style={{position: 'relative'}} sx={{mx: 'auto'}}> */}
         <BackgroundSection />
       </section>
-        <Grid columns={ [1, 3] } sx={{ mx: ['2em', '4em', '8em'] }}>
-          <Card>
+      <Grid columns={ [1, 3] } sx={{ mx: ['2em', '4em', '8em'] }}>
+        <Card sx={cardsx}>
+          <Box sx={{ textAlign: 'center' }}>
+            <Heading as='h3'>
+              independent operation
+            </Heading>
             <Box>
-              <Heading as='h3'>
-                independent operation
-              </Heading>
-              <Box>
-                we are a small team that has experience in crypto industry since 2017
-              </Box>
+              we are a small team with years of experience in crypto industry
             </Box>
-          </Card>
-          <Card>
+          </Box>
+        </Card>
+        <Card sx={cardsx}>
+          <Box sx={{ textAlign: 'center' }}>
             <Heading as='h3'>
               cloud provisioned
             </Heading>
             <Container>
               leverage flexibility of cloud infrastructure to ensure scalability
             </Container>
-          </Card>
-          <Card>
+          </Box>
+        </Card>
+        <Card sx={cardsx}>
+          <Box sx={{ textAlign: 'center' }}>
             <Heading as='h3'>
               secure
             </Heading>
             <div>
-              security is the cornerstone for our service and we follow the best practices to excel
+              security is the cornerstone for our service and we follow the best practices to protect delegators
             </div>
-          </Card>
-        </Grid>
+          </Box>
+        </Card>
+      </Grid>
     </main>
   )
 }
