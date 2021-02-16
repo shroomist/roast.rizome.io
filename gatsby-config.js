@@ -14,14 +14,14 @@ module.exports = {
     ]
   },
   plugins: [
-          {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `sources`,
-          path: `src`,
-          ignore: [`**/\.*`], // ignore files starting with a dot
-        },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sources`,
+        path: `src`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
+    },
     {
       resolve: `gatsby-theme-blorg`,
       options: {
