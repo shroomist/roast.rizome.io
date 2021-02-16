@@ -7,24 +7,36 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 import { getPoolData, PoolSummary } from '../services/adapool'
 
+import { Feats } from '../comp/feats'
+
 const poolId = '0d7af673b35b05c292168bab17b1069493d2d10fe095071f355fd724'
 
 const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "images/rost.png" }) {
+        background: file(relativePath: { eq: "images/rost.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
+        },
+        logo: file(relativePath: { eq: "images/logo.png" }) {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+
         }
       }
     `
   )
   // Set ImageData.
-  const imageData = data.desktop.childImageSharp.fluid
+  const imageData = data.background.childImageSharp.fluid
+  const logoData = data.logo.childImageSharp.fixed
+  console.log(logoData)
 
   return (
       <BackgroundImage
@@ -34,11 +46,12 @@ const BackgroundSection = ({ className }) => {
       >
         <Flex>
           <section sx={{
-            mx: ['2em', '2em', '5em'],
+            mx: ['2em', '4em', '8em'],
             my: ['1.5em', '3em', '5em']
           }}>
-            <Heading as='h1'>roast pool</Heading>
-            <Heading as='h3'>cardano stake pool</Heading>
+            <Img fixed={logoData} alt="cardano roast pool" />
+            {/* <Heading as='h1'>roast pool</Heading> */}
+            <Heading as='h3' sx={{mb: '1em'}}>delegate cardano for high returns</Heading>
             <section sx={{ pt: '3em'}}>
               <Heading as='h2'>stakes are better <br/> when roasted wild</Heading>
 
@@ -76,6 +89,7 @@ const PoolData = () => {
     </Card>
   )
 }
+
 export default ({data}) => {
   const [,setColorMode] = useColorMode()
   useEffect(() => setColorMode('dark'), [])
@@ -84,41 +98,9 @@ export default ({data}) => {
   return (
     <main sx={{ pb: 4, mx: 'auto' }}>
       <section>
-        {/* <Card style={{position: 'relative'}} sx={{mx: 'auto'}}> */}
         <BackgroundSection />
       </section>
-      <Grid columns={ [1, 3] } sx={{ mx: ['2em', '4em', '8em'] }}>
-        <Card sx={cardsx}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Heading as='h3'>
-              independent operation
-            </Heading>
-            <Box>
-              we are a small team with years of experience in crypto industry
-            </Box>
-          </Box>
-        </Card>
-        <Card sx={cardsx}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Heading as='h3'>
-              cloud provisioned
-            </Heading>
-            <Container>
-              leverage flexibility of cloud infrastructure to ensure scalability
-            </Container>
-          </Box>
-        </Card>
-        <Card sx={cardsx}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Heading as='h3'>
-              secure
-            </Heading>
-            <div>
-              security is the cornerstone for our service and we follow the best practices to protect delegators
-            </div>
-          </Box>
-        </Card>
-      </Grid>
+      <Feats />
     </main>
   )
 }
