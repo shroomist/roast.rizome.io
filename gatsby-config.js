@@ -19,6 +19,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-TRRWBDYE7F'],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sources`,
