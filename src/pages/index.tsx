@@ -9,6 +9,7 @@ import { getPoolData, PoolSummary } from '../services/adapool'
 
 import { Feats } from '../comp/feats'
 
+import { Helmet } from 'react-helmet'
 const poolId = '0d7af673b35b05c292168bab17b1069493d2d10fe095071f355fd724'
 
 const BackgroundSection = ({ className }) => {
@@ -36,7 +37,6 @@ const BackgroundSection = ({ className }) => {
   // Set ImageData.
   const imageData = data.background.childImageSharp.fluid
   const logoData = data.logo.childImageSharp.fixed
-  console.log(logoData)
 
   return (
       <BackgroundImage
@@ -50,7 +50,6 @@ const BackgroundSection = ({ className }) => {
             my: ['1.5em', '3em', '5em']
           }}>
             <Img fixed={logoData} alt="cardano roast pool" />
-            {/* <Heading as='h1'>roast pool</Heading> */}
             <Heading as='h3' sx={{mb: '1em'}}>delegate cardano for high returns</Heading>
             <section sx={{ pt: '3em'}}>
               <Heading as='h2'>stakes are better <br/> when roasted wild</Heading>
@@ -97,6 +96,12 @@ export default ({data}) => {
 
   return (
     <main sx={{ pb: 4, mx: 'auto' }}>
+      <Helmet>
+        <title>Cardano roast stake pool</title>
+        <meta name="description" content="Delegate Cardano to low saturation pool" />
+        <meta name="keywords" content="cardano, stake, stakepool, pool, delegate, delegation, margin, mining, staking" />
+        <meta name="icon" content="/fav.png" />
+      </Helmet>
       <section>
         <BackgroundSection />
       </section>
