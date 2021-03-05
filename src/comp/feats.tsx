@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from "gatsby";
-/* import { Image } from "theme-ui"; */
 import Img from "gatsby-image"
 import { Card, Container, Grid, Heading } from "theme-ui";
 export const Feats = () => {
@@ -30,15 +29,15 @@ export const Feats = () => {
   const content = [
     {
       header: 'independent operation',
-      body: 'we are a small team with years of experience in crypto industry'
+      body: 'value decentralization and encourage you to staking with smaller pools'
     },
     {
-      header: 'cloud provisioned',
-      body: 'leverage flexibility of cloud infrastructure to ensure scalability'
+      header: 'cloud infrastructure',
+      body: 'leverage DigitalOcean provisioning to achieve no distruptions on operation'
     },
     {
-      header: 'secure',
-      body: 'security is the cornerstone for our service and we follow the best practices to protect delegators'
+      header: 'security',
+      body: 'no root access, key based auth, ufw, fail2ban, vpc, no private keys on servers'
     }
   ];
 
@@ -47,10 +46,10 @@ export const Feats = () => {
       <Grid columns={ [1, 3] } gap={ ['1em', '2em'] } sx={{ mx: ['2em', '4em', '8em'] }}>
         {content.map((c, i) =>
           <Card sx={cardsx} key={i}>
-            <Container sx={{px:['8em', 0, '1em'], mt: [-20, 0, 0, -20]}}>
+            <Container sx={{width: ['40%', '100%', '100%', '50%'], mt: [-20, 0, 0, -10]}}>
             <Img fluid={img[i].fluid} sx={ {mx: 'auto'} } />
             </Container>
-            <Heading as='h3' sx={{mt: [ -20, 0, 0, -40 ]}}>
+            <Heading as='h3' sx={{mt: [ -20, 0, 0, -20 ], mb: '1em'}}>
               {c.header}
             </Heading>
             <Container>

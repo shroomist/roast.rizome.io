@@ -25,7 +25,7 @@ const BackgroundSection = ({ className }) => {
         },
         logo: file(relativePath: { eq: "images/logo.png" }) {
           childImageSharp {
-            fixed(width: 300) {
+            fixed(width: 240) {
               ...GatsbyImageSharpFixed_withWebp
             }
           }
@@ -50,10 +50,7 @@ const BackgroundSection = ({ className }) => {
             my: ['1.5em', '3em', '5em']
           }}>
             <Img fixed={logoData} alt="cardano roast pool" />
-            <Heading as='h3' sx={{mb: '1em'}}>delegate cardano for high returns</Heading>
             <section sx={{ pt: '3em'}}>
-              <Heading as='h2'>stakes are better <br/> when roasted wild</Heading>
-
               <Flex>
                 <PoolData />
               </Flex>
@@ -75,14 +72,14 @@ const PoolData = () => {
   if (!info) return null
 
   return (
-    <Card sx={{ ...cardsx, my: ['1em','2em']}}>
+    <Card sx={{ ...cardsx, my: ['1em','2em'], 'font-size': [ '1em', '1.2em' ]}}>
       - Ticker: {info.ticker} 🍖<br/>
       - Fee: {info.fee * 100}% <br/>
       - Fixed: {info.fixed / 1000000} Ada <br/>
       - Pledge: {info.pledge / 1000000000}k <br/>
+      {/* - Rank: {info.rank} */}
       see on
       <Link href={`http://adapools.org/pool/${poolId}`}> adapools</Link>
-      {/* - Rank: {info.rank} */}
       {/* - PoolId: <Link href="google.com">adapools</Link> */}
 
     </Card>
