@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/roast-pool`,
+  // pathPrefix: `/roast-pool`,
   siteMetadata: {
     siteURL: 'https://shroomist.github.io/candy-pool/', // replace this with your own domain
     siteUrl: 'https://shroomist.github.io/roast-pool/', // replace this with your own domain
